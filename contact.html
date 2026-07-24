@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact & Map - Apex Tech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen custom-scrollbar">
+  <nav class="glass-header fixed top-0 w-full z-50 h-20 flex items-center justify-between px-8">
+    <a href="index.html" class="text-xl font-black text-gradient cms-company-name">Apex Tech</a>
+    <div class="flex gap-6 text-sm font-semibold">
+      <a href="index.html" class="hover:text-blue-400">Accueil</a>
+      <a href="contact.html" class="text-blue-400">Contact</a>
+    </div>
+  </nav>
+  <main class="pt-32 pb-20 px-4 max-w-6xl mx-auto space-y-12 flex-grow">
+    <div class="text-center space-y-3">
+      <span class="text-blue-500 font-extrabold text-xs uppercase">OPTION 10: Contact & Carte</span>
+      <h1 class="text-4xl font-black text-white">Mifandray Aminay</h1>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <form onsubmit="submitContactForm(event)" class="glass-card p-8 rounded-3xl space-y-4 border border-slate-800">
+        <h3 class="text-xl font-bold text-white">Handefa Hafatra na Demande de Devis</h3>
+        <input id="cntName" type="text" placeholder="Anarana sy Fanampiny" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
+        <input id="cntEmail" type="email" placeholder="Email" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
+        <input id="cntPhone" type="tel" placeholder="Laharana Telefonina" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
+        <input id="cntSubject" type="text" placeholder="Lohahevitra / Subject" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
+        <textarea id="cntMessage" rows="4" placeholder="Soraty eto ny antsipirian'ny tetikasa..." required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
+        <button type="submit" class="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs uppercase tracking-wider transition">Handefa (Envoyer)</button>
+      </form>
+      <div class="space-y-6">
+        <div class="glass-card p-6 rounded-3xl border border-slate-800 space-y-3">
+          <h4 class="font-bold text-white">📍 Toerana & Laharana</h4>
+          <p class="text-xs text-slate-300 cms-address">Antananarivo, Madagascar</p>
+          <p class="text-xs text-slate-300 cms-phone">+261 34 00 123 45</p>
+          <p class="text-xs text-slate-300 cms-email">contact@apextech.mg</p>
+        </div>
+        <div class="rounded-3xl overflow-hidden h-64 border border-slate-800">
+          <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.205934105312!2d47.5218!3d-18.8792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDUyJzQ1LjEiUyA0N8KwMzEnMTguNSJF!5e0!3m2!1sfr!2smg!4v1620000000000!5m2!1sfr!2smg" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
